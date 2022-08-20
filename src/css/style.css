@@ -1,0 +1,22 @@
+html,
+body {
+  margin: 0;
+}
+.field {
+  overflow: hidden;
+  
+}
+section {
+  margin: -1%;
+  padding: 20px;
+}
+.zone {
+  background: #000;
+  float: left;
+  height: 12vw;
+  margin: 1%;
+  width: 20%;
+  text-align: center;
+  padding-top: 2.5vw;
+  box-sizing: border-box;
+}

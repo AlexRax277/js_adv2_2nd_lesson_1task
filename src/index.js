@@ -1,9 +1,7 @@
-import changeZone from './js/app';
+import Goblin from './js/app.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const goblin = document.querySelector('.img');
-  const zones = document.querySelectorAll('.zone');
-  const currentZone = zones[Math.floor(Math.random() * zones.length)];
-  currentZone.appendChild(goblin);
-  changeZone(goblin, zones, currentZone);
+  const goblin = new Goblin(document.querySelector('.img'), document.querySelectorAll('.zone'));
+  goblin.getZone();
+  goblin.getNextzone();
 });

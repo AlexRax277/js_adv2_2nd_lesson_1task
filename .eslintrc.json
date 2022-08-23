@@ -12,6 +12,7 @@
       "WithStatement"
     ],
     "consistent-return":"off",
-    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+    "import/extensions": "off"
   }
 }

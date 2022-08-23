@@ -1,11 +1,22 @@
-export default function changeZone(target, zonesList, currentZone) {
-  const nextZone = zonesList[Math.floor(Math.random() * zonesList.length)];
-  if (nextZone !== currentZone) {
-    setInterval(() => {
-      nextZone.appendChild(target);
-      return changeZone();
-    }, 5000);
-  } else {
-    return changeZone();
+export default class Goblin {
+  constructor(goblin, field) {
+    this.goblin = goblin;
+    this.field = field;
+  }
+
+  getZone() {
+    this.field[Math.floor(Math.random() * this.field.length)].appendChild(this.goblin);
+  }
+
+  getNextzone() {
+    const currentZone = document.querySelector('.img').closest('.zone');
+    const nextZone = this.field[Math.floor(Math.random() * this.field.length)];
+    if (currentZone !== nextZone) {
+      setInterval(() => {
+        this.getZone();
+      }, 1000);
+    } else {
+      this.getNextzone();
+    }
   }
 }

@@ -1,22 +1,22 @@
-export default class Goblin {
-  constructor(goblin, field) {
-    this.goblin = goblin;
-    this.field = field;
-  }
+import Goblin from './goblin.js';
 
-  getZone() {
-    this.field[Math.floor(Math.random() * this.field.length)].appendChild(this.goblin);
+export default function mainFoo() {
+  const field = document.createElement('div');
+  field.className = 'field';
+  const section = document.createElement('section');
+  field.appendChild(section);
+  const zonNum = 1;
+  while (zonNum < 17) {
+    const zone = document.createElement('div');
+    zone.className = 'zone';
+    section.appendChild(zone);
   }
-
-  getNextzone() {
-    const currentZone = document.querySelector('.img').closest('.zone');
-    const nextZone = this.field[Math.floor(Math.random() * this.field.length)];
-    if (currentZone !== nextZone) {
-      setInterval(() => {
-        this.getZone();
-      }, 1000);
-    } else {
-      this.getNextzone();
-    }
-  }
+  const image = document.createElement('img');
+  image.alt = 'goblin';
+  image.className = 'img';
+  image.src = '/src/img/goblin.png';
+  document.documentElement.body.appendChild(field);
+  const goblin = new Goblin(document.querySelector('.img'), document.querySelectorAll('.zone'));
+  goblin.getZone();
+  goblin.getNextzone();
 }

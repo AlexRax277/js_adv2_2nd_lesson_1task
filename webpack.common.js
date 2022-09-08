@@ -1,12 +1,13 @@
-const path = require('path');
+// const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   target: 'web',
+  entry: `${__dirname}/src/index.js`,
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
+    path: `${__dirname}/dist`,
+    publicPath: '/dist',
   },
   module: {
     rules: [
@@ -43,7 +44,7 @@ module.exports = {
       filename: './index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: 'styles.css',
+      filename: 'style.css',
     }),
   ],
   stats: {

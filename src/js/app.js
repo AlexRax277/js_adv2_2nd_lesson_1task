@@ -5,8 +5,7 @@ export default function mainFoo() {
   field.className = 'field';
   const section = document.createElement('section');
   field.appendChild(section);
-  const zonNum = 1;
-  while (zonNum < 17) {
+  for (let i = 0; i < 16; i++) {
     const zone = document.createElement('div');
     zone.className = 'zone';
     section.appendChild(zone);
@@ -15,7 +14,8 @@ export default function mainFoo() {
   image.alt = 'goblin';
   image.className = 'img';
   image.src = '/src/img/goblin.png';
-  document.documentElement.body.appendChild(field);
+  document.body.appendChild(image);
+  document.body.appendChild(field);
   const goblin = new Goblin(document.querySelector('.img'), document.querySelectorAll('.zone'));
   goblin.getZone();
   goblin.getNextzone();

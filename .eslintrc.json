@@ -13,6 +13,7 @@
     ],
     "consistent-return":"off",
     "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
-    "import/extensions": "off"
+    "import/extensions": "off",
+    "no-plusplus": "off"
   }
 }

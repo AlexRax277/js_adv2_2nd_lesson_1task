@@ -1,4 +1,4 @@
-// const path = require('path');
+const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -6,8 +6,10 @@ module.exports = {
   target: 'web',
   entry: `${__dirname}/src/index.js`,
   output: {
-    path: `${__dirname}/dist`,
-    publicPath: '/dist',
+    // path: `${__dirname}/dist`,
+    // publicPath: '/dist',
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
   },
   module: {
     rules: [

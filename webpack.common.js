@@ -7,7 +7,7 @@ module.exports = {
   // entry: `${__dirname}/src/index.js`,
   output: {
     path: `${__dirname}/dist`,
-    publicPath: '/dist',
+    publicPath: '/js_adv2_2nd_lesson_1task/dist',
     // path: path.resolve(__dirname, 'dist'),
     // publicPath: '/',
   },

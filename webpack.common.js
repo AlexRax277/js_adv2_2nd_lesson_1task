@@ -7,7 +7,7 @@ module.exports = {
   // entry: `${__dirname}/src/index.js`,
   output: {
     path: `${__dirname}/dist`,
-    publicPath: '/js_adv2_2nd_lesson_1task/dist',
+    publicPath: '/dist',
     // path: path.resolve(__dirname, 'dist'),
     // publicPath: '/',
   },
@@ -46,7 +46,7 @@ module.exports = {
       filename: './index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: 'style.css',
+      filename: './src/css/style.css',
     }),
   ],
   stats: {

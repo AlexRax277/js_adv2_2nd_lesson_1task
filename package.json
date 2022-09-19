@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage",
+    "test": "jest --coverage --transformIgnorePatterns \"node_modules/(?!@toolz/allow)/\" --env=jsdom",
     "lint": "eslint .",
     "build": "webpack --config webpack.prod.js",
     "start": "webpack serve --config webpack.dev.js"
@@ -44,8 +44,5 @@
   },
   "jest": {
     "testEnvironment": "jsdom"
-  },
-  "transform": {
-    "\\.js$": "<rootDir>/node_modules/babel-jest"
   }
 }
